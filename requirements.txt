@@ -1,0 +1,22 @@
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+streamlit>=1.32
+scikit-learn>=1.3
+yfinance>=0.2.33
+requests>=2.31.0
+fredapi>=0.5.1
+
+# For Stooq via pandas-datareader
+pandas-datareader>=0.10.0
+
+# Config and env loading
+python-dotenv>=1.0.1
+
+# Dev / QA
+pytest>=8.2.0
+ruff>=0.6.9
+
+# Needed on Python >=3.12 to provide distutils for pandas-datareader
+setuptools>=68
+

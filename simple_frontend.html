@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📈 Portfolio Factor Analysis - Interactive Frontend</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        .header p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 40px;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .feature {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #22c55e;
+        }
+        .feature h3 {
+            margin: 0 0 15px;
+            color: #1f2937;
+            font-size: 1.3em;
+        }
+        .feature p {
+            margin: 0;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+        .stocks {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stock-sector {
+            background: #f3f4f6;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+        .stock-sector h4 {
+            margin: 0 0 10px;
+            color: #374151;
+            font-size: 1.1em;
+        }
+        .stock-list {
+            font-size: 0.9em;
+            color: #6b7280;
+            line-height: 1.4;
+        }
+        .cta-section {
+            background: #1f2937;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+        .cta-section h2 {
+            margin: 0 0 20px;
+            font-size: 2em;
+        }
+        .btn {
+            display: inline-block;
+            background: #22c55e;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: background 0.3s;
+            margin: 10px;
+        }
+        .btn:hover {
+            background: #16a34a;
+        }
+        .btn-secondary {
+            background: #6b7280;
+        }
+        .btn-secondary:hover {
+            background: #4b5563;
+        }
+        .example {
+            background: #fef7cd;
+            border: 1px solid #fbbf24;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .example h4 {
+            margin: 0 0 10px;
+            color: #92400e;
+        }
+        .code {
+            background: #1f2937;
+            color: #f3f4f6;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        .status {
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .status.success {
+            background: #d1fae5;
+            border: 1px solid #22c55e;
+            color: #065f46;
+        }
+        .status.warning {
+            background: #fef3c7;
+            border: 1px solid #fbbf24;
+            color: #92400e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📈 Real-Life Portfolio Factor Analysis</h1>
+            <p>Analyze your portfolio using real stock data and accurate factor models</p>
+        </div>
+
+        <div class="content">
+            <div class="example">
+                <h4>🚀 Quick Start</h4>
+                <p>Your interactive portfolio analysis tool is ready! Here's how to use it:</p>
+                <ol>
+                    <li>Click the "Open Streamlit App" button below</li>
+                    <li>Select "Real Stock Portfolio" in the sidebar</li>
+                    <li>Choose stocks or enter custom tickers</li>
+                    <li>Click "Analyze Portfolio" and get detailed insights!</li>
+                </ol>
+            </div>
+
+            <div class="cta-section">
+                <h2>🎯 Access Your Interactive Tool</h2>
+                <p>Click below to start your portfolio analysis:</p>
+                <a href="http://localhost:8501" class="btn" target="_blank">🌐 Open Streamlit App</a>
+                <a href="http://127.0.0.1:8501" class="btn btn-secondary" target="_blank">📱 Alternative URL</a>
+            </div>
+
+            <div class="status success">
+                ✅ <strong>Tool Status:</strong> Your portfolio factor analysis tool is installed and ready to use!
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <h3>📊 Real Stock Data</h3>
+                    <p>Analyze actual stocks with live market data from Yahoo Finance. Get accurate factor exposure analysis for your portfolio.</p>
+                </div>
+                <div class="feature">
+                    <h3>🎯 Interactive Selection</h3>
+                    <p>Choose from popular stock sectors or enter custom tickers. Built-in sector pre-sets make portfolio creation easy.</p>
+                </div>
+                <div class="feature">
+                    <h3>🧠 Detailed Explanations</h3>
+                    <p>Every metric comes with clear explanations. Understand what each factor beta means for your portfolio.</p>
+                </div>
+                <div class="feature">
+                    <h3>📈 Professional Analysis</h3>
+                    <p>Enterprise-grade factor analysis using Fama-French five-factor model plus momentum. Same quality as institutional platforms.</p>
+                </div>
+            </div>
+
+            <h3>🏢 Popular Stock Sectors Available</h3>
+            <div class="stocks">
+                <div class="stock-sector">
+                    <h4>Technology</h4>
+                    <div class="stock-list">AAPL, MSFT, GOOGL, AMZN, META, NVDA, TSLA, NFLX</div>
+                </div>
+                <div class="stock-sector">
+                    <h4>Financials</h4>
+                    <div class="stock-list">JPM, BAC, WFC, GS, MS, C, AXP, USB</div>
+                </div>
+                <div class="stock-sector">
+                    <h4>Healthcare</h4>
+                    <div class="stock-list">JNJ, PFE, UNH, ABBV, MRK, TMO, ABT, DHR</div>
+                </div>
+                <div class="stock-sector">
+                    <h4>Consumer</h4>
+                    <div class="stock-list">KO, PEP, WMT, PG, JNJ, MCD, NKE, SBUX</div>
+                </div>
+                <div class="stock-sector">
+                    <h4>Energy</h4>
+                    <div class="stock-list">XOM, CVX, COP, EOG, SLB, KMI, PSX, MPC</div>
+                </div>
+                <div class="stock-sector">
+                    <h4>ETFs</h4>
+                    <div class="stock-list">SPY, QQQ, VTI, EFA、EEM, VWO, TLT, GLD</div>
+                </div>
+            </div>
+
+            <h3>💡 Example Analysis</h3>
+            <div class="example">
+                <h4>Technology Portfolio Analysis Results:</h4>
+                <p><strong>Stocks:</strong> AAPL, MSFT, GOOGL, NVDA</p>
+                <p><strong>Market Beta:</strong> 1.15 (more volatile than market)</p>
+                <p><strong>Momentum Exposure:</strong> 0.12 (momentum-driven)</p>
+                <p><strong>Alpha:</strong> 0.0015 (positive excess returns)</p>
+                <p><strong>Interpretation:</strong> Aggressive tech portfolio with momentum tilt and stock-picking skill</p>
+            </div>
+
+            <div class="cta-section">
+                <h2>📚 Understanding Factor Analysis</h2>
+                <p>Learn about the metrics you'll see in your analysis:</p>
+                <div style="text-align: left; max-width: 600px; margin: 0 auto;">
+                    <p><strong>Alpha:</strong> Portfolio skill beyond factor exposures</p>
+                    <p><strong>Market Beta:</strong> Sensitivity to overall market moves</p>
+                    <p><strong>SMB:</strong> Small-cap vs large-cap exposure</p>
+                    <p><strong>HML:</strong> Value vs growth stock preference</p>
+                    <p><strong>MOM:</strong> Momentum-driven vs contrarian behavior</p>
+                    <p><strong>R-squared:</strong> How well factors explain your returns</p>
+                </div>
+                <a href="http://localhost:8501" class="btn" target="_blank">🚀 Start Your Analysis</a>
+            </div>
+</body>
+</html>
